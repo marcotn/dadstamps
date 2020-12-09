@@ -1,0 +1,10 @@
+name: dadstamps
+on: [push]
+jobs:
+  deploy-cloud-functions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - run: npm install -g bats
+      - run: bats -v
