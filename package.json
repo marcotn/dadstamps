@@ -1,0 +1,19 @@
+{
+  "name": "dadstamps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcotn/dadstamps.git"
+  },
+  "author": "Marco Pavanelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcotn/dadstamps/issues"
+  },
+  "homepage": "https://github.com/marcotn/dadstamps#readme"
+}
