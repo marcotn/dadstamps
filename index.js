@@ -1,4 +1,4 @@
-exports.dadStamps = (req, res) => {
-  res.send('Hello, World');
+exports.get_categories = (req, res) => {
+  res.send('testing get categories');
 };
 
