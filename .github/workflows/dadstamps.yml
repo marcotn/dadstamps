@@ -5,6 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions-hub/gcloud@master
       - uses: actions/setup-node@v1
-      - run: npm install -g bats
-      - run: bats -v
+    env:
+      PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
+      APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
+    with:
+      args functions deploy get_categories --runtime nodejs10 --trigger-http --allow-unauthenticated
