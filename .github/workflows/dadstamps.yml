@@ -4,7 +4,6 @@ jobs:
   deploy-cloud-functions:
     runs-on: ubuntu-latest
     steps:
-    name: deploy-function
     - uses: google-github-actions/deploy-cloud-functions@v0.1.0
       with:
         runtime: nodejs10
