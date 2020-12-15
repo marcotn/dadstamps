@@ -4,7 +4,7 @@ jobs:
   deploy-cloud-functions:
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/deploy-cloud-functions@v0.1.0
+    - uses: google-github-actions/deploy-cloud-functions@v0.1.0
       with:
         runtime: nodejs10
         project: ${{ secrets.GCLOUD_PROJECT_ID }}
