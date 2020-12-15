@@ -4,11 +4,10 @@ jobs:
   deploy-cloud-functions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-hub/gcloud@master
-      - uses: actions/setup-node@v1
-    env:
-      PROJECT_ID: ${{secrets.GCLOUD_PROJECT_ID}}
-      APPLICATION_CREDENTIALS: ${{secrets.GOOGLE_APPLICATION_CREDENTIALS}}
-    with:
-      args functions deploy get_categories --runtime nodejs10 --trigger-http --allow-unauthenticated
+      id: deploy-function
+      uses: google-github-actions/deploy-cloud-functions@v0.1.0
+      with:
+        name: get_categories
+        runtime: nodejs10
+        project: ${{ secrets.GCLOUD_PROJECT_ID }}
+        credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
