@@ -6,6 +6,7 @@ jobs:
     steps:
     - uses: google-github-actions/deploy-cloud-functions@v0.1.0
       with:
+        name: get_categories
         runtime: nodejs10
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
