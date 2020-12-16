@@ -5,11 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: google-github-actions/deploy-cloud-functions@v0.1.0
+    - uses: google-github-actions/deploy-cloud-functions@main
       with:
         name: get_categories
         runtime: nodejs10
-        entry_point: get_categories
-        source_dir: ./
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
