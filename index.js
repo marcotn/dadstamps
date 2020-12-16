@@ -1,4 +1,4 @@
 exports.get_categories = (req, res) => {
-  res.send('testing get categories');
+  res.send({"categories":["stamps","letters"]});
 };
 
