@@ -9,7 +9,7 @@ jobs:
       with:
         name: get_categories
         runtime: nodejs10
-        entry_point: get_categgories
+        entry_point: get_categories
         source_dir: ./
         project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
         credentials: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
