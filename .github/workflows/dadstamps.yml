@@ -4,6 +4,7 @@ jobs:
   deploy-cloud-functions:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@master
     - uses: google-github-actions/deploy-cloud-functions@v0.1.0
       with:
         name: get_categories
